@@ -22,6 +22,8 @@ int main() {
 	//initialise and load
 	init();
 	while (!window.isOpen()) {
+		static sf::Clock clock;
+		const float dt = clock.restart().asSeconds();
 		//Calculate dt
 		...
 			window.clear();

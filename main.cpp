@@ -19,6 +19,7 @@ void Update(double dt) {
 void render(sf::RenderWindow& window) {
 	// Draw Everything
 	window.display();
+	window.setVerticalSyncEnabled(true / false);
 }
 
 void clean() {

@@ -4,12 +4,21 @@ void init() {
 	// initialise all the objects needed for the game. 
 }
 
-void update(float dt) {
-	// Update Everything
+float playerSpeed = 10.0f;
+void Update(double dt) {
+	//bad!
+	if (moveButton.pressed) {
+		player.move(playerSpeed);
+	}
+	//Good!
+	if (moveButton.pressed) {
+		player.move(playerSpeed * dt);
+	}
 }
 
 void render(sf::RenderWindow& window) {
 	// Draw Everything
+	window.display();
 }
 
 void clean() {
